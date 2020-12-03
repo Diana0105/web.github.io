@@ -1,0 +1,50 @@
+@btnBuyColor: #c90909;
+@btnMoreColor: #287ecd;
+
+@pdVerBtn: 10px;
+@pdHorizBtn: 60px;
+@bdRadBtn: 25px;
+
+@fontFamily: "Roboto Slab", "Verdana", sans-serif;
+@fontSizeBtn: 0.85rem;
+@fontColorBtn: #ffffff;
+
+.btn {
+  display: inline-block;
+  padding: @pdVerBtn @pdHorizBtn;
+
+  border: none;
+  border-radius: @bdRadBtn;
+
+  text-transform: uppercase;
+  text-decoration: none;
+
+  font-family: @fontFamily;
+  font-weight: bold;
+  font-size: @fontSizeBtn;
+  color: @fontColorBtn;
+
+  &-small {
+    padding: @pdVerBtn + 5 @pdHorizBtn - 20;
+  }
+
+  &-buy {
+    background-color: @btnBuyColor;
+
+    &:hover {
+      .hover (@btnBuyColor);
+    }
+  }
+
+  &-more {
+    background-color: @btnMoreColor;
+
+    &:hover {
+      .hover (@btnMoreColor);
+    }
+  }
+
+  .hover(@color) {
+    background-color: lighten(@color, 7%);
+  }
+}
